@@ -1,5 +1,4 @@
-//#include <SDL2/SDL_render.h>
-#include </usr/include/SDL2/SDL_render.h>
+#include <SDL2/SDL_render.h>
 #include <iostream>
 
 #include "../include/RenderWindow.hpp"

@@ -1,10 +1,7 @@
 #pragma once
-//#include <SDL2/SDL.h>
-//#include <SDL2/SDL_ttf.h>
-//#include <SDL2/SDL_image.h>
-#include </usr/include/SDL2/SDL.h>
-#include </usr/include/SDL2/SDL_ttf.h>
-#include </usr/include/SDL2/SDL_image.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
+#include <SDL2/SDL_image.h>
 
 #include "../include/Entity.hpp"
 #include "../include/Font.hpp"
