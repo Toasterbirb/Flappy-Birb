@@ -332,9 +332,9 @@ int Entry::gameLoop()
 		window.render(frameText);
 
 		// Score collider debugging
-		SDL_SetRenderDrawColor(renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
-		SDL_RenderDrawLine(renderer, scoreCollider.x, 0, scoreCollider.x, 1280);
-		SDL_RenderDrawLine(renderer, scoreCollider.x + scoreCollider.w, 0, scoreCollider.x + scoreCollider.w, 1280);
+		//SDL_SetRenderDrawColor(renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
+		//SDL_RenderDrawLine(renderer, scoreCollider.x, 0, scoreCollider.x, 1280);
+		//SDL_RenderDrawLine(renderer, scoreCollider.x + scoreCollider.w, 0, scoreCollider.x + scoreCollider.w, 1280);
 
 		window.display();
 
