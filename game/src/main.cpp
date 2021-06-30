@@ -2,13 +2,13 @@
 #include <vector>
 
 // Engine
-#include "../include/RenderWindow.hpp"
-#include "../include/Entity.hpp"
-#include "../include/Utils.hpp"
-#include "../include/Audio.hpp"
+#include "../../engine/include/RenderWindow.hpp"
+#include "../../engine/include/Entity.hpp"
+#include "../../engine/include/Utils.hpp"
+#include "../../engine/include/Audio.hpp"
 
 // Game
-#include "../../game/include/Entry.hpp"
+#include "../include/Entry.hpp"
 
 
 int main(int argc, char* argv[])
