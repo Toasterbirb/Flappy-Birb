@@ -81,6 +81,7 @@ int Entry::gameLoop()
 	
 	// Load sound effects
 	SoundFile jumpSound("./res/audio/sound_fx/jump.wav");
+	SoundFile scoreSound("./res/audio/sound_fx/score.wav");
 	
 
 	// Framerate counter + score
@@ -278,7 +279,12 @@ int Entry::gameLoop()
 			else if (!SDL_HasIntersection(entities[0].getRect(), &scoreCollider))
 			{
 				birbInScoreCollider = false;
+				
+				// Increase score
 				score++;
+
+				// Play score sound effect
+				scoreSound.play();
 			}
 
 
@@ -346,6 +352,7 @@ int Entry::gameLoop()
 
 	//mainSong.free();
 	jumpSound.free();
+	scoreSound.free();
 	window.cleanUp();
 	TTF_CloseFont(manaspace);
 
