@@ -201,10 +201,6 @@ int main(int argc, char** argv)
 		timeStep.End();
 	}
 
-	/* Release soundfiles */
-	jumpSound.free();
-	gameOverSound.free();
-
 	window.Cleanup();
 	return 0;
 }
