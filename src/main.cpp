@@ -54,14 +54,14 @@ int main(int argc, char** argv)
 	entities.push_back(&birbEntity);
 
 	/* Game over text */
-	Birb::Entity gameOverText("Game over", Birb::Vector2int(window.window_dimensions.x / 2, window.window_dimensions.y / 2 - 50), Birb::EntityComponent::TextComponent("Game Over", manaspace, &Birb::Colors::Black));
+	Birb::Entity gameOverText("Game over", Birb::Vector2int(window.window_dimensions.x / 2, window.window_dimensions.y / 2 - 50), Birb::EntityComponent::Text("Game Over", manaspace, &Birb::Colors::Black));
 	gameOverText.active = false;
 	gameOverText.localScale = Birb::Vector2f(2, 2);
 	gameOverText.rect.x -= gameOverText.rect.w; // Center the text
 	entities.push_back(&gameOverText);
 
 	/* Game restart hint text */
-	Birb::Entity restartHintText("Restart hint", Birb::Vector2int(window.window_dimensions.x / 2, window.window_dimensions.y / 2 + 20), Birb::EntityComponent::TextComponent("Hit space to restart", manaspace, &Birb::Colors::Black));
+	Birb::Entity restartHintText("Restart hint", Birb::Vector2int(window.window_dimensions.x / 2, window.window_dimensions.y / 2 + 20), Birb::EntityComponent::Text("Hit space to restart", manaspace, &Birb::Colors::Black));
 	restartHintText.active = false;
 	restartHintText.rect.x -= restartHintText.rect.w / 2; // Center the text
 	entities.push_back(&restartHintText);
