@@ -4,6 +4,7 @@
 #include <birb2d/Timestep.hpp>
 #include <birb2d/Audio.hpp>
 #include <birb2d/Values.hpp>
+#include <birb2d/Random.hpp>
 #include <birb2d/Physics.hpp>
 
 void GeneratePipes(std::vector<Birb::Entity> *topPipes, std::vector<Birb::Entity> *bottomPipes, SDL_Texture* pipeTexture);
@@ -220,7 +221,7 @@ void GeneratePipes(std::vector<Birb::Entity> *topPipes, std::vector<Birb::Entity
 	int height;
 	for (int i = 0; i < 4; i++)
 	{
-		height = topPipeHeight + Birb::utils::randomInt(-pipeHeightVariation, pipeHeightVariation);
+		height = topPipeHeight + Birb::Random::RandomInt(-pipeHeightVariation, pipeHeightVariation);
 		Birb::Entity topPipe("Top pipe", Birb::Vector2int(pipeDistance * (i + 1) + pipeStartDistance, height), pipeTexture);
 		topPipe.localScale = Birb::Vector2f(pipeSizeMultiplier, pipeSizeMultiplier);
 		topPipe.angle = 180;
@@ -261,6 +262,6 @@ void LoopPipes(std::vector<Birb::Entity> *topPipes, std::vector<Birb::Entity> *b
 	bottomPipes->at(index).rect.x = currentFurthestDistance + pipeDistance;
 
 	/* Randomize the height */
-	topPipes->at(index).rect.y = topPipeHeight + Birb::utils::randomInt(-pipeHeightVariation, pipeHeightVariation);
+	topPipes->at(index).rect.y = topPipeHeight + Birb::Random::RandomInt(-pipeHeightVariation, pipeHeightVariation);
 	bottomPipes->at(index).rect.y = topPipes->at(index).rect.y + 800;
 }
